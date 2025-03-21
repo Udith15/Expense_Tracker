@@ -69,6 +69,7 @@
             let amt=document.querySelector("#inp1").value
             let dattime=document.querySelector("#inp2").value
 
+            let tr=document.createElement("tr")
 
             let td1=document.createElement("td")
             let td2=document.createElement("td")
@@ -78,9 +79,11 @@
             td2.innerText=amt
             td3.innerText=dattime
 
-            document.querySelector(".tablebody").append(td1)
-            document.querySelector(".tablebody").append(td2)
-            document.querySelector(".tablebody").append(td3)
+            tr.append(td1)
+            tr.append(td2)
+            tr.append(td3)
+
+            document.querySelector(".tablebody").append(tr)
         }
     </script>
 </body>

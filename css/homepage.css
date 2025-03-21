@@ -36,6 +36,8 @@ body {
 }
 .d2-3{
     flex:6;
+    max-height: 400px;
+    overflow-y: auto;
     border: solid 1px rgb(0, 0, 0);
     margin: 2px;
 }
