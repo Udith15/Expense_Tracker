@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d1">
+        <h3>Navigation bar</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+    </div>
+    <div class="d2">
+        <div class="d2-1">
+            <h1>Content</h1>
+        </div>
+        <div class="d2-2">
+            <form>
+                <select class="form-select" id="inputGroupSelect01">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                </select>
+                <input type="number" id="inp1" class="inp" placeholder="Enter amount">
+                <input type="datetime-local" id="inp2" class="inp" placeholder="Enter date">
+                <button type="button" class="btn btn-success" onclick="insertinfo()">+ Add item</button>
+            </form>
+        </div>
+        <div class="d2-3">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Type of Expenditure</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date and Time</th>
+                  </tr>
+                </thead>
+                <tbody class="tablebody">
+
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function insertinfo(){
+            debugger
+            let exptype=document.querySelector("#inputGroupSelect01").value
+            let amt=document.querySelector("#inp1").value
+            let dattime=document.querySelector("#inp2").value
+
+
+            let td1=document.createElement("td")
+            let td2=document.createElement("td")
+            let td3=document.createElement("td")
+
+            td1.innerText=exptype
+            td2.innerText=amt
+            td3.innerText=dattime
+
+            document.querySelector(".tablebody").append(td1)
+            document.querySelector(".tablebody").append(td2)
+            document.querySelector(".tablebody").append(td3)
+        }
+    </script>
+</body>
+</html>
