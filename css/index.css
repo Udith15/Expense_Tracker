@@ -38,13 +38,11 @@ li {
 }
 
 a {
-    color: #66FCF1;
+    color: #ff0000;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
-
 a:hover {
-    color: #ff0000;
     text-decoration: underline;
 }
 .d1 {
@@ -115,16 +113,9 @@ a:hover {
     background-color: #66FCF1;
     border: none;
     padding: 15px 32px;
-    text-align: center;
     font-size: 18px;
     margin: 8px 2px;
     cursor: pointer;
     border-radius: 30px;
     color: #1F1F1F;
-    transition: transform 0.3s, background 0.3s;
-}
-
-.btn:hover {
-    background-color: #50d9cf;
-    transform: scale(1.05);
 }

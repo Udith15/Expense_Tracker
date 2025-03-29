@@ -18,6 +18,11 @@
                     <a class="nav-link" href="#">Link</a>
                 </li> -->
             </ul>
+
+        <div class="d1total">
+            <h3>Total Expense</h3>
+            <p id="expenseval">0</p>
+        </div>
     </div>
     <div class="d2">
         <div class="d2-1">
@@ -60,9 +65,12 @@
     <script>
         function insertinfo(){
             debugger
-            let exptype=document.querySelector("#inputGroupSelect01").value
-            let amt=document.querySelector("#inp1").value
-            let dattime=document.querySelector("#inp2").value
+            let exptype=document.getElementById("inputGroupSelect01").value
+            let amt=document.getElementById("inp1").value
+            let dattime=document.getElementById("inp2").value
+            // let exptype=document.querySelector("#inputGroupSelect01").value
+            // let amt=document.querySelector("#inp1").value
+            // let dattime=document.querySelector("#inp2").value
 
             let tr=document.createElement("tr")
 
@@ -78,7 +86,11 @@
             tr.append(td2)
             tr.append(td3)
 
-            document.querySelector(".tablebody").append(tr)
+            document.getElementsByClassName("tablebody")[0].append(tr)
+
+            let totalamt=document.getElementById("expenseval")
+
+            totalamt.innerText=Number(totalamt.innerText)+Number(amt)
         }
     </script>
 </body>
